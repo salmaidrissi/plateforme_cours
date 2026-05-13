@@ -5,4 +5,4 @@ class CoursForm(forms.ModelForm):
 
     class Meta:
         model = Cours
-        fields = ['titre', 'description']
+        fields = ['titre', 'description', 'image', 'pdf']

@@ -7,12 +7,19 @@ class Cours(models.Model):
     titre = models.CharField(max_length=200)
 
     description = models.TextField()
-
+    
+    pdf = models.FileField(
+    upload_to='cours_pdfs/',
+    null=True,
+    blank=True
+)
     image = models.ImageField(
         upload_to='cours_images/',
         null=True,
         blank=True
     )
+
+
 
     enseignant = models.ForeignKey(
         User,
