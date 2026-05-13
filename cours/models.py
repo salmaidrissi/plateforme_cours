@@ -19,7 +19,11 @@ class Cours(models.Model):
         blank=True
     )
 
-
+    video = models.FileField(
+    upload_to='cours_videos/',
+    null=True,
+    blank=True
+)
 
     enseignant = models.ForeignKey(
         User,

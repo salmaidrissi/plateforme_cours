@@ -17,6 +17,13 @@
     <img src="{{ cours.image.url }}" class="img-fluid mb-3" style="max-height: 400px; object-fit: cover;">
 {% endif %}
 
+{% if cours.video %}
+    <video width="100%" controls class="mt-3">
+        <source src="{{ cours.video.url }}">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+{% endif %}
+
 {% if cours.pdf %}
     <a href="{{ cours.pdf.url }}" class="btn btn-primary" target="_blank">
         Voir le PDF du cours
