@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL = '/login/'
 
 # Application definition
 
@@ -57,7 +58,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
 
-        'DIRS': [],   # ou BASE_DIR / "templates"
+        'DIRS': [BASE_DIR / 'templates'],   # ou BASE_DIR / "templates"
 
         'APP_DIRS': True,
 

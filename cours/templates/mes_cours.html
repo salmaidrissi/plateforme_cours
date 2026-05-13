@@ -1,0 +1,15 @@
+<h2>Mes cours</h2>
+
+{% for i in inscriptions %}
+
+    <div>
+        <h3>{{ i.cours.titre }}</h3>
+        <p>{{ i.cours.description }}</p>
+        <small>{{ i.date_inscription }}</small>
+    </div>
+
+{% empty %}
+
+    <p>Aucun cours inscrit</p>
+
+{% endfor %}
